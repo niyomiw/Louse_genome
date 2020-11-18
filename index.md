@@ -1,4 +1,5 @@
-# Whole Genome Sequencing Analysis of Head lice 
+
+## Whole Genome Sequencing Analysis of Head lice 
 
 Welcome to Whole Genome Sequece (WGS) analysis of head lice
 
