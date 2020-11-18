@@ -2,12 +2,17 @@
 
 Welcome to Whole Genome Sequece (WGS) analysis of head lice
 
-In this tutorial, I will walk you through the steps that I took to analyse a WGS dataset from raw to anaylysis ready. Please feel free to click on any sub-section on the left to skip ahead or follow the tutorial from top to bottom. The raw sequencing files will be deposited into ncbi in the near future. 
+In this tutorial, I will walk you through the steps that I took to analyse a WGS dataset from raw to anaylysis ready. The data is from a non-model organism (refer to about section below) and thus will follow the traditional data-analysis pipelines are are used for human data. The raw sequencing files will be deposited into ncbi in the near future. 
 
 #### About the dataset  
 
-I used Illumina short paired-end reads that were already demultiplexed to remove barcodes. Dataset was also trimmed based on the quality, which resulted in raw fastq paired-end reads. Process of demultiplexing and trimming is unfortunately not a part of this tutorial. Programs that my colleague used to do this are trimmomatic, fastQC and multiQC.
+The dataset is from a 'human head lice WGS project' in the Reed Lab at the Florida Museum of Natural History. I used Illumina short paired-end reads that were already demultiplexed to remove barcodes. Dataset was also trimmed based on the quality, which resulted in raw fastq paired-end reads. Process of demultiplexing and trimming is unfortunately not a part of this tutorial. Programs that my colleague used to do this are trimmomatic, fastQC and multiQC.
 
+#### Step 1: Mapping reads to a reference 
+
+This section assumes that you already have a reference genome available for your species. If you don't, there are some additional steps that you need to take to first assemble your raw reads to contigs (not a part of this tutorial).
+
+There are mutiple programs that you can use to align your raw reads to a reference genome. The most commonly used programs are BWA, Bowtie2 and NovoAlign. If you are interested in learning about their performance please refer to these article [Link] (https://pubmed.ncbi.nlm.nih.gov/28286147/)
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
