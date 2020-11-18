@@ -1,8 +1,12 @@
-## Welcome to GitHub Pages
+# Whole Genome Sequencing Analysis of Head lice 
 
-You can use the [editor on GitHub](https://github.com/niyomiw/louse_genome/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Welcome to Whole Genome Sequece (WGS) analysis of head lice
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+In this tutorial, I will walk you through the steps that I took to analyse a WGS dataset from raw to anaylysis ready. Please feel free to click on any sub-section on the left to skip ahead or follow the tutorial from top to bottom. The raw sequencing files will be deposited into ncbi in the near future. 
+
+#### About the dataset  
+
+I used Illumina short paired-end reads that were already demultiplexed to remove barcodes. Dataset was also trimmed based on the quality, which resulted in raw fastq paired-end reads. Process of demultiplexing and trimming is unfortunately not a part of this tutorial. Programs that my colleague used to do this are trimmomatic, fastQC and multiQC.
 
 ### Markdown
 
