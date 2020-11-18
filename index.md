@@ -1,4 +1,4 @@
-Welcome to the Head Louse Whole Genome Sequecing project
+### Welcome to the Human Head Louse Whole Genome Sequecing Project
 
 In this tutorial, I will walk you through the steps that I took to analyse a WGS dataset from raw to analysis ready. The data is from a non-model organism (refer to about section below) and thus will not follow the traditional data-analysis pipelines that are used for human data. The raw sequencing files will be deposited into ncbi in the near future. 
 
