@@ -1,3 +1,7 @@
+---
+layout: page
+title: About
+---
 
 ## Whole Genome Sequencing Analysis of Head lice 
 
