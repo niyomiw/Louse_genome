@@ -30,5 +30,16 @@ done
 
 ```
 What did we specify in the command above? 
-We first loaded the module, set the number of threads to 10 (You can change this number depending on how much resources available to you), -Y tells bwa to use soft clipping on supplimentary reads, -R specifies the unique Read groups assigned to your libraries (GATK requires a RG tag to identify each unique sample that comes from multiple libraries). 
+- We first loaded the module 
+- set the number of threads to 10 (You can change this number depending on how much resources available to you)
+- -Y tells bwa to use soft clipping on supplimentary reads
+- -R specifies the unique Read groups assigned to your libraries (GATK requires a RG tag to identify each unique sample that comes from multiple libraries). 
+
+Depending on how many resources you allocate and how big your files are, it will take a few hours to complete a run. 
+
+**What does the output from bwa looks like?**
+
+If you are using the command line, you can use either the 'less' command (to view the full files) or the 'head' command (to view the first few lines of the files) to view your file. 
+
+
 
