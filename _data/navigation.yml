@@ -1,7 +1,7 @@
 # Site navigation links
-- title: About
-  url: /About/
-
+sidebar: 
+  - url: /About
+     title: About
 #- title: Presentations
   #url: /presentations/
 
