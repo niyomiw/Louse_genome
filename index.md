@@ -12,22 +12,19 @@ This section assumes that you already have a reference genome available for your
 
 There are mutiple programs that you can use to align your raw reads to a reference genome. The most commonly used programs are BWA, Bowtie2 and NovoAlign. If you are interested in learning about their performance please refer to this [article](https://pubmed.ncbi.nlm.nih.gov/28286147/) among many that you can find on google scholar. 
 
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+##### Command
 
 ```markdown
-Module load BWA 
+Module load BWA #If you are using a comuputing cluster, you have to load the necessary module before you begin
 
-bwa mem \
--t 32 \
--Y \
--R '@RG\tID:LHA-body.1.1\tLB:NS4444\tPL:ILLUMINA\tPM:NOVASEQ\tSM:"$i"' \
-${FASTAREF} \
-${R1}/${GROUP_CODE}."$i".pair1.truncated.gz \
-${R1}/${GROUP_CODE}."$i".pair2.truncated.gz \
-> ${SAMPATH}/${FILE_CODE}_${GROUP_CODE1}_"$i".${PAIR_CODE}.sam;\
+bwa mem \ #program
+-t 32 \ #number of threads to use
+-Y \ #tells bwa to use soft clipping on supplimentary reads
+-R '@RG\tID:LHA-body.1.1\tLB:NS4444\tPL:ILLUMINA\tPM:NOVASEQ\tSM:"$i"' \ #Read group to identify your samples. GATK requires a RG tag
+${FASTAREF} \ #path to your reference genome 
+${R1}/${GROUP_CODE}."$i".pair1.truncated.gz \ #raw read pair1
+${R1}/${GROUP_CODE}."$i".pair2.truncated.gz \ #raw read pair2
+> ${SAMPATH}/${FILE_CODE}_${GROUP_CODE1}_"$i".${PAIR_CODE}.sam;\ #output directory and file name
 done 
 
 ```
