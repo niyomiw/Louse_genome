@@ -12,7 +12,7 @@ The dataset is from a 'human head lice WGS project' in the Reed Lab at the Flori
 
 This section assumes that you already have a reference genome available for your species. If you don't, there are some additional steps that you need to take to first assemble your raw reads to contigs (not a part of this tutorial).
 
-There are mutiple programs that you can use to align your raw reads to a reference genome. The most commonly used programs are BWA, Bowtie2 and NovoAlign. If you are interested in learning about their performance please refer to these article [Link] (https://pubmed.ncbi.nlm.nih.gov/28286147/)
+There are mutiple programs that you can use to align your raw reads to a reference genome. The most commonly used programs are BWA, Bowtie2 and NovoAlign. If you are interested in learning about their performance please refer to these article [https://pubmed.ncbi.nlm.nih.gov/28286147/]
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
