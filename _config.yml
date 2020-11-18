@@ -1,1 +1,14 @@
 theme: jekyll-theme-slate
+title: WGS Analysis of Head Lice
+locale: USA, FL
+
+# Enter the following platform usernames if you would like for them to appear on your site.
+owner:
+  name: Niyomi House
+  avatar: bio-photo.jpg
+  bio: "This is a tutorial for processing WGS data of a non-model organism"
+  email: nwijewardena@ufl.edu
+  # Do not include the @ symbol in your Twitter username
+  twitter: niyomiw88
+  linkedin: Niyomi House
+  github: niyomiw
