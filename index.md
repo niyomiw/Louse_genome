@@ -15,26 +15,20 @@ There are mutiple programs that you can use to align your raw reads to a referen
 ##### Command
 
 ```markdown
-Module load BWA #If you are using a comuputing cluster, you have to load the necessary module before you begin
+#If you are using a computing cluster, you have to load the necessary module before you begin
+Module load BWA 
 
-bwa mem \ #program
--t 32 \ #number of threads to use
--Y \ #tells bwa to use soft clipping on supplimentary reads
--R '@RG\tID:LHA-body.1.1\tLB:NS4444\tPL:ILLUMINA\tPM:NOVASEQ\tSM:"$i"' \ #Read group to identify your samples. GATK requires a RG tag
-${FASTAREF} \ #path to your reference genome 
-${R1}/${GROUP_CODE}."$i".pair1.truncated.gz \ #raw read pair1
-${R1}/${GROUP_CODE}."$i".pair2.truncated.gz \ #raw read pair2
-> ${SAMPATH}/${FILE_CODE}_${GROUP_CODE1}_"$i".${PAIR_CODE}.sam;\ #output directory and file name
+bwa mem \ 
+-t 10 \ 
+-Y \ 
+-R '@RG\tID:seq_info.lane\tLB:library_name\tPL:ILLUMINA\tPM:NOVASEQ\tSM:sample_name \ 
+path/to/your/reference_genome \ 
+path/to/your/raw/reads/sample_name.pair1.truncated.gz \ 
+path/to/your/raw/reads/sample_name.pair2.truncated.gz \ 
+> path/to/your/output/directory/file_name.sam;\ 
 done 
 
 ```
+What did we specify in the command above? 
+We first loaded the module, set the number of threads to 10 (You can change this number depending on how much resources available to you), -Y tells bwa to use soft clipping on supplimentary reads, -R specifies the unique Read groups assigned to your libraries (GATK requires a RG tag to identify each unique sample that comes from multiple libraries). 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/niyomiw/louse_genome/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
