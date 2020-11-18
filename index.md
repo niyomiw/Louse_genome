@@ -10,27 +10,26 @@ The dataset is from a 'human head lice WGS project' in the Reed Lab at the Flori
 
 This section assumes that you already have a reference genome available for your species. If you don't, there are some additional steps that you need to take to first assemble your raw reads to contigs (not a part of this tutorial).
 
-There are mutiple programs that you can use to align your raw reads to a reference genome. The most commonly used programs are BWA, Bowtie2 and NovoAlign. If you are interested in learning about their performance please refer to this [article](https://pubmed.ncbi.nlm.nih.gov/28286147/) among many that you can find on google scholoar. 
+There are mutiple programs that you can use to align your raw reads to a reference genome. The most commonly used programs are BWA, Bowtie2 and NovoAlign. If you are interested in learning about their performance please refer to this [article](https://pubmed.ncbi.nlm.nih.gov/28286147/) among many that you can find on google scholar. 
+
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
-Syntax highlighted code block
+Module load BWA 
 
-# Header 1
-## Header 2
-### Header 3
+bwa mem \
+-t 32 \
+-Y \
+-R '@RG\tID:LHA-body.1.1\tLB:NS4444\tPL:ILLUMINA\tPM:NOVASEQ\tSM:"$i"' \
+${FASTAREF} \
+${R1}/${GROUP_CODE}."$i".pair1.truncated.gz \
+${R1}/${GROUP_CODE}."$i".pair2.truncated.gz \
+> ${SAMPATH}/${FILE_CODE}_${GROUP_CODE1}_"$i".${PAIR_CODE}.sam;\
+done 
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
